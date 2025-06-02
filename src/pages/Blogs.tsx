@@ -1,26 +1,26 @@
 import React from "react";
 import { BlogCard } from "../components/BlogCard";
-import mobileAppMarketingImage from "../assets/images/mobileAppMarketingImage.jpg";
-import businessNeedsAppImage from "../assets/images/businessNeedsAppImage.jpg";
-import chatgptExplainedImage from "../assets/images/chatgptExplainedImage.jpg";
+// import mobileAppMarketingImage from "../assets/images/mobileAppMarketingImage.jpg";
+// import businessNeedsAppImage from "../assets/images/businessNeedsAppImage.jpg";
+// import chatgptExplainedImage from "../assets/images/chatgptExplainedImage.jpg";
 
 const blogPosts = [
   {
     title: "How to create a successful Mobile App Marketing Strategy in 2025",
     date: "Saturday 31 May 2025",
-    imageSrc: mobileAppMarketingImage,
+    // imageSrc: mobileAppMarketingImage,
     link: "/blog/mobile-app-marketing-strategy-2025",
   },
   {
     title: "7 Reasons Why Your Business Needs a Mobile App",
     date: "Saturday 31 May 2025",
-    imageSrc: businessNeedsAppImage,
+    // imageSrc: businessNeedsAppImage,
     link: "/blog/7-reasons-business-needs-mobile-app",
   },
   {
     title: "ChatGPT by OpenAI Explained",
     date: "Saturday 31 May 2025",
-    imageSrc: chatgptExplainedImage,
+    // imageSrc: chatgptExplainedImage,
     link: "/blog/chatgpt-by-openai-explained",
   },
 ];
@@ -35,7 +35,7 @@ export const Blogs: React.FC = () => {
             key={index}
             title={post.title}
             date={post.date}
-            imageSrc={post.imageSrc}
+            // imageSrc={post.imageSrc}
             link={post.link}
           />
         ))}

@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
-import contactIllustration from "../assets/images/contact-illustration.jpg";
+// import contactIllustration from "../assets/images/contact-illustration.jpg";
 
 export const Contact: React.FC = () => {
   return (
@@ -28,11 +28,11 @@ export const Contact: React.FC = () => {
               <strong>Phone:</strong> +91-1234567891
             </li>
           </ul>
-          <img
+          {/* <img
             src={contactIllustration}
             alt="Contact Illustration"
             className="w-full h-auto mt-4"
-          />
+          /> */}
         </div>
         <div>
           <ContactForm />

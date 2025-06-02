@@ -1,12 +1,12 @@
 import React from "react";
 import { PortfolioCard } from "../components/PortfolioCard";
-import gasstationImage from "../assets/images/gasstationImage.png";
+// import gasstationImage from "../assets/images/gasstationImage.png";
 
 const portfolioItems = [
   {
     title: "Gas Station",
     description: "Find nearby gas stations and check fuel or petrol services.",
-    imageSrc: gasstationImage,
+    // imageSrc: gasstationImage,
   },
 ];
 
@@ -20,7 +20,7 @@ export const Portfolio: React.FC = () => {
             key={index}
             title={item.title}
             description={item.description}
-            imageSrc={item.imageSrc}
+            // imageSrc={item.imageSrc}
           />
         ))}
       </div>

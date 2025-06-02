@@ -1,20 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Portfolio", path: "/portfolio" },
+  { name: "Products", path: "/services" },
+  { name: "Latest News", path: "/blogs" },
   { name: "Contact Us", path: "/contact" },
 ];
 
 export const Navbar = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-blue-600">
-          StackLoop
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <Link to="/" className="block transform scale-125">
+          <img src={logo} alt="Logo" className="h-24 object-contain" />
         </Link>
         <ul className="flex space-x-8 text-gray-700 font-semibold">
           {navItems.map(({ name, path }) => (
