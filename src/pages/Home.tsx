@@ -13,6 +13,7 @@ import productImg from "../assets/images/Product page img.jpg";
 import supportImg from "../assets/images/Support page img.jpg";
 
 import "aos/dist/aos.css";
+import { TitleImageSlider } from "../components/TitleImageSlider";
 
 export const Home: React.FC = () => {
   useEffect(() => {
@@ -41,6 +42,20 @@ export const Home: React.FC = () => {
 
       {/* Hero Section */}
       <Products />
+
+      {/* Title + Image Slider Section */}
+      <section className="py-16 px-6 md:px-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <TitleImageSlider
+            slides={[
+              { src: bannerImg, title: "Welcome to Our Company" },
+              { src: aboutImg, title: "About Us" },
+              { src: productImg, title: "Explore Our Products" },
+              { src: supportImg, title: "24/7 Support Services" },
+            ]}
+          />
+        </div>
+      </section>
 
       <section className="py-16 px-6 md:px-20 bg-white">
         <h1 className="flex items-center justify-center py-5 text-2xl font-semibold ">
