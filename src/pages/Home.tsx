@@ -40,6 +40,7 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Hero Section */}
+      <Products />
 
       <section className="py-16 px-6 md:px-20 bg-white">
         <h1 className="flex items-center justify-center py-5 text-2xl font-semibold ">
@@ -120,7 +121,7 @@ export const Home: React.FC = () => {
           </div> */}
         </div>
       </section>
-      <Products />
+
       {/* <RecentProjects /> */}
       {/* <Testimonials /> */}
     </>
