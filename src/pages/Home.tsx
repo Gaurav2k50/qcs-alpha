@@ -5,17 +5,15 @@ import AOS from "aos";
 import { Products } from "../components/Products";
 // import RecentProjects from "../components/RecentProjects";
 import { ImageSlider } from "../components/ImageSlider";
-import steelImg from "../assets/images/Steel Plant.jpg";
+import steelImg from "../assets/images/Steelplant.jpg";
 import petrochemicalImg from "../assets/images/Petrochemicals.jpg";
-import fertilizerImg from "../assets/images/fertilizer Plant .jpg";
+import fertilizerImg from "../assets/images/fertilizerPlant .jpg";
 import waterImg from "../assets/images/WasteWaterplant.jpg";
 import paperImg from "../assets/images/Paper&pulpindustry.jpg";
 import chemicalImg from "../assets/images/Chemical plant.jpg";
 import coalImg from "../assets/images/Coal&ore.jpg";
 import cementImg from "../assets/images/CementIndustry.jpg";
-
-import powerImg from "../assets/images/Power plant.jpg";
-// Import your images
+import powerImg from "../assets/images/Powerplant.jpg";
 import bannerImg from "../assets/images/Home Page Banner img.jpg";
 import aboutImg from "../assets/images/About page img.jpg";
 import productImg from "../assets/images/Product page img.jpg";
