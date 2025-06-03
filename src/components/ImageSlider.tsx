@@ -30,21 +30,24 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
         },
       },
     ],
+    className: "w-screen overflow-hidden",
   };
 
   return (
-    <div className="relative w-full">
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className="outline-none">
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-[500px] object-cover rounded-lg"
-            />
-          </div>
-        ))}
-      </Slider>
+    <div className="w-screen overflow-hidden -ml-[50vw] left-1/2 relative -mt-[65px]">
+      <div className="w-screen">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index} className="outline-none">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-screen h-screen object-cover"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
