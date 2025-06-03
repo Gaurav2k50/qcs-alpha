@@ -5,7 +5,16 @@ import AOS from "aos";
 import { Products } from "../components/Products";
 // import RecentProjects from "../components/RecentProjects";
 import { ImageSlider } from "../components/ImageSlider";
+import steelImg from "../assets/images/Steel Plant.jpg";
+import petrochemicalImg from "../assets/images/Petrochemicals.jpg";
+import fertilizerImg from "../assets/images/fertilizer Plant .jpg";
+import waterImg from "../assets/images/WasteWaterplant.jpg";
+import paperImg from "../assets/images/Paper&pulpindustry.jpg";
+import chemicalImg from "../assets/images/Chemical plant.jpg";
+import coalImg from "../assets/images/Coal&ore.jpg";
+import cementImg from "../assets/images/CementIndustry.jpg";
 
+import powerImg from "../assets/images/Power plant.jpg";
 // Import your images
 import bannerImg from "../assets/images/Home Page Banner img.jpg";
 import aboutImg from "../assets/images/About page img.jpg";
@@ -30,7 +39,6 @@ export const Home: React.FC = () => {
   return (
     <>
       {/* <HeroSection /> */}
-
       {/* Image Slider Section */}
       <section className="py-16 px-6 md:px-20 bg-gray-50">
         <div data-aos="fade-up">
@@ -39,7 +47,6 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Hero Section */}
       <Products />
 
@@ -48,23 +55,27 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <TitleImageSlider
             slides={[
-              { src: bannerImg, title: "Welcome to Our Company" },
-              { src: aboutImg, title: "About Us" },
-              { src: productImg, title: "Explore Our Products" },
-              { src: supportImg, title: "24/7 Support Services" },
+              { src: powerImg, title: "Power Plant" },
+              { src: petrochemicalImg, title: "Petrochemical" },
+              { src: steelImg, title: "Steel Plant" },
+              { src: fertilizerImg, title: "Fertilizer plant" },
+              { src: waterImg, title: "Water & Waste Water" },
+              { src: paperImg, title: "Paper & Pulp" },
+              { src: chemicalImg, title: "Chemical plant" },
+              { src: coalImg, title: "Coal & Ore Mine" },
+              { src: cementImg, title: "Cement plant" },
             ]}
           />
         </div>
       </section>
-
       <section className="py-16 px-6 md:px-20 bg-white">
         <h1 className="flex items-center justify-center py-5 text-2xl font-semibold ">
-          Core Value
+          🌟Core Value
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center mb-16">
           <div data-aos="fade-up">
             <div className="mx-auto w-16 h-16 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl">
-              🥨
+              🎯
             </div>
             <h3 className="text-lg font-bold mt-4">Precision</h3>
             <p className="text-gray-600 mt-2">
@@ -73,7 +84,7 @@ export const Home: React.FC = () => {
           </div>
           <div data-aos="fade-up" data-aos-delay="200">
             <div className="mx-auto w-16 h-16 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl">
-              ❄
+              🛡️
             </div>
             <h3 className="text-lg font-bold mt-4">Integrty</h3>
             <p className="text-gray-600 mt-2">
@@ -82,7 +93,7 @@ export const Home: React.FC = () => {
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
             <div className="mx-auto w-16 h-16 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl">
-              😁
+              😊
             </div>
             <h3 className="text-lg font-bold mt-4">Satisfaction</h3>
             <p className="text-gray-600 mt-2">
@@ -91,7 +102,7 @@ export const Home: React.FC = () => {
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
             <div className="mx-auto w-16 h-16 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl">
-              😊
+              🔒
             </div>
             <h3 className="text-lg font-bold mt-4">Reliability</h3>
             <p className="text-gray-600 mt-2">
@@ -136,7 +147,6 @@ export const Home: React.FC = () => {
           </div> */}
         </div>
       </section>
-
       {/* <RecentProjects /> */}
       {/* <Testimonials /> */}
     </>
