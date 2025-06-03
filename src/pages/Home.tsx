@@ -10,7 +10,7 @@ import petrochemicalImg from "../assets/images/Petrochemicals.jpg";
 import fertilizerImg from "../assets/images/fertilizerPlant .jpg";
 import waterImg from "../assets/images/WasteWaterplant.jpg";
 import paperImg from "../assets/images/Paper&pulpindustry.jpg";
-import chemicalImg from "../assets/images/Chemical plant.jpg";
+import chemicalImg from "../assets/images/ChemicalPlant.jpg";
 import coalImg from "../assets/images/Coal&ore.jpg";
 import cementImg from "../assets/images/CementIndustry.jpg";
 import powerImg from "../assets/images/Powerplant.jpg";
