@@ -3,20 +3,18 @@ import AOS from "aos";
 import { Products } from "../components/Products";
 import { ImageSlider } from "../components/ImageSlider";
 import { EstemedCustomers } from "../components/EstemedCustomers";
-// import steelImg from "../assets/images/Steelplant.jpg";
-// import petrochemicalImg from "../assets/images/Petrochemicals.jpg";
-// import fertilizerImg from "../assets/images/fertilizerPlant .jpg";
-// import waterImg from "../assets/images/WasteWaterplant.jpg";
-// import paperImg from "../assets/images/Paper&pulpindustry.jpg";
-// import chemicalImg from "../assets/images/ChemicalPlant.jpg";
-// import coalImg from "../assets/images/Coal&ore.jpg";
-// import cementImg from "../assets/images/CementIndustry.jpg";
+import steelImg from "../assets/images/Steelplant.jpg";
+import petrochemicalImg from "../assets/images/Petrochemicals.jpg";
+import fertilizerImg from "../assets/images/fertilizerPlant .jpg";
+import waterImg from "../assets/images/WasteWaterplant.jpg";
+import paperImg from "../assets/images/Paper&pulpindustry.jpg";
+import chemicalImg from "../assets/images/ChemicalPlant.jpg";
+import coalImg from "../assets/images/Coal&ore.jpg";
+import cementImg from "../assets/images/CementIndustry.jpg";
 import home from "../assets/images/Home-Page-Banner.jpg";
 import { TitleImageSlider } from "../components/TitleImageSlider";
 import bannerImg from "../assets/images/Home Page Banner img.jpg";
 import aboutImg from "../assets/images/About page img.jpg";
-import productImg from "../assets/images/Product page img.jpg";
-import supportImg from "../assets/images/Support page img.jpg";
 
 import "aos/dist/aos.css";
 
@@ -28,8 +26,6 @@ export const Home: React.FC = () => {
   const sliderImages = [
     { src: bannerImg, alt: "Home Banner" },
     { src: aboutImg, alt: "About Us" },
-    { src: productImg, alt: "Our Products" },
-    { src: supportImg, alt: "Support Services" },
   ];
 
   return (
@@ -55,14 +51,14 @@ export const Home: React.FC = () => {
           <TitleImageSlider
             slides={[
               { src: home, title: "Home Page Banner" },
-              // { src: petrochemicalImg, title: "Petrochemical" },
-              // { src: steelImg, title: "Steel Plant" },
-              // { src: fertilizerImg, title: "Fertilizer plant" },
-              // { src: waterImg, title: "Water & Waste Water" },
-              // { src: paperImg, title: "Paper & Pulp" },
-              // { src: chemicalImg, title: "Chemical plant" },
-              // { src: coalImg, title: "Coal & Ore Mine" },
-              // { src: cementImg, title: "Cement plant" },
+              { src: petrochemicalImg, title: "Petrochemical" },
+              { src: steelImg, title: "Steel Plant" },
+              { src: fertilizerImg, title: "Fertilizer plant" },
+              { src: waterImg, title: "Water & Waste Water" },
+              { src: paperImg, title: "Paper & Pulp" },
+              { src: chemicalImg, title: "Chemical plant" },
+              { src: coalImg, title: "Coal & Ore Mine" },
+              { src: cementImg, title: "Cement plant" },
             ]}
           />
         </div>
