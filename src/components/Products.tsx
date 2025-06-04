@@ -7,6 +7,7 @@ import productImg3 from "../assets/images/Moisture meter img1.jpeg";
 import productImg4 from "../assets/images/Multi components analyser1.jpg";
 import productImg5 from "../assets/images/Oxygen analyzer img 2 in-situ type.jpeg";
 import productImg6 from "../assets/images/pHmeter.jpeg";
+// import { PageBanner } from "./PageBanner";
 
 const services = [
   {
@@ -48,6 +49,11 @@ export const Products: React.FC = () => {
 
   return (
     <section className="bg-[#f7f8fa] py-16 px-6 md:px-20">
+      {/* <PageBanner
+        title="About Us"
+        description="Quantic at a Glance"
+        backgroundImage={productImg6}
+      /> */}
       <h2
         className="text-4xl font-bold text-center text-[#0f172a] mb-12 leading-snug"
         data-aos="fade-up"

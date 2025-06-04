@@ -19,23 +19,30 @@ import { GiBrickWall } from "react-icons/gi";
 import { GiWaterRecycling } from "react-icons/gi";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { PageBanner } from "../components/PageBanner";
+import aboutImg from "../assets/images/About page img.jpg";
 export const About: React.FC = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
   }, []);
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
+      <PageBanner
+        title="About Us"
+        description="Quantic at a Glance"
+        backgroundImage={aboutImg}
+      />
       {/* About Us Section */}
       <section
         className="max-w-6xl mx-auto my-16 p-8 bg-gradient-to-tr from-white via-blue-50 to-white rounded-xl shadow-lg relative overflow-hidden"
         data-aos="fade-up"
       >
-        <h2 className="text-4xl font-extrabold text-blue-700 mb-6 relative z-10">
+        {/* <h2 className="text-4xl font-extrabold text-blue-700 mb-6 relative z-10">
           About Us
-        </h2>
-        <h4 className="flex justify-center text-2xl font-bold text-blue-700 mb-6 relative z-10">
+        </h2> */}
+        {/* <h4 className="flex justify-center text-2xl font-bold text-blue-700 mb-6 relative z-10">
           Quantic at a Glance
-        </h4>
+        </h4> */}
 
         <p className="text-gray-700 text-lg leading-relaxed relative z-10">
           M/S Quantic Control System is an ISO 9001:2015 certified company as
@@ -68,7 +75,6 @@ export const About: React.FC = () => {
           plant.
         </p>
       </section>
-
       {/* Industry Served Section */}
       <section className="mb-20" data-aos="fade-up">
         <h2 className="text-4xl font-bold text-center mb-6">Industry Served</h2>

@@ -4,12 +4,14 @@ import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { Footer } from "./components/Footer";
 import { About } from "./pages/About";
-import { Blogs } from "./pages/Blogs";
+// import { Blogs, LatestNews } from "./pages/Blogs";
 import { Portfolio } from "./pages/Portfolio";
 import { Contact } from "./pages/Contact";
 import Services from "./pages/Services";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Support } from "./pages/support";
+import { LatestNews } from "./pages/LatestNews";
 
 export function App() {
   useEffect(() => {
@@ -27,10 +29,11 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/latestNews" element={<LatestNews />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/support" element={<Support />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />

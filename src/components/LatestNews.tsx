@@ -1,13 +1,13 @@
 import React from "react";
 
-interface BlogCardProps {
+interface NewsCardProps {
   title: string;
   date: string;
   // imageSrc: string;
   link: string;
 }
 
-export const BlogCard: React.FC<BlogCardProps> = ({
+export const NewsCard: React.FC<NewsCardProps> = ({
   title,
   date,
   // imageSrc,
