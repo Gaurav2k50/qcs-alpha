@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
 import { PageBanner } from "../components/PageBanner";
-import aboutImg from "../assets/images/About page img.jpg";
+import contactImg from "../assets/images/Contact-us-img.jpg";
 import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
 
 export const Contact: React.FC = () => {
@@ -26,13 +26,13 @@ export const Contact: React.FC = () => {
     {
       icon: <FiClock className="w-6 h-6" />,
       title: "Business Hours",
-      details: "Mon - Fri: 9:00 AM - 6:00 PM",
+      details: "Mon - Sat: 9:00 AM - 6:00 PM",
     },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <PageBanner title="Contact Us" backgroundImage={aboutImg} />
+      <PageBanner title="Contact Us" backgroundImage={contactImg} />
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Contact Info Cards */}

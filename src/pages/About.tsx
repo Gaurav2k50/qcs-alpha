@@ -1,13 +1,5 @@
 import React, { useEffect } from "react";
 
-import // MdPower,
-// FaLightbulb,
-// FaUserFriends,
-// FaPalette,
-// FaBullseye,
-// FaUsers,
-// FaHandshake,
-"react-icons/fa";
 import { MdPower } from "react-icons/md";
 import { GiMineWagon } from "react-icons/gi";
 import { FaIndustry } from "react-icons/fa";
@@ -37,14 +29,7 @@ export const About: React.FC = () => {
         className="max-w-6xl mx-auto my-16 p-8 bg-gradient-to-tr from-white via-blue-50 to-white rounded-xl shadow-lg relative overflow-hidden"
         data-aos="fade-up"
       >
-        {/* <h2 className="text-4xl font-extrabold text-blue-700 mb-6 relative z-10">
-          About Us
-        </h2> */}
-        {/* <h4 className="flex justify-center text-2xl font-bold text-blue-700 mb-6 relative z-10">
-          Quantic at a Glance
-        </h4> */}
-
-        <p className="text-gray-700 text-lg leading-relaxed relative z-10">
+        <p className="text-gray-800 text-lg leading-relaxed relative z-10 bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 first-letter:text-4xl first-letter:font-serif first-letter:mr-1 first-letter:float-left first-letter:text-blue-600">
           M/S Quantic Control System is an ISO 9001:2015 certified company as
           well as MSME organization based at Jamshedpur was the outcome of
           conscious effort of an experienced and well-balanced team of
@@ -78,11 +63,6 @@ export const About: React.FC = () => {
       {/* Industry Served Section */}
       <section className="mb-20" data-aos="fade-up">
         <h2 className="text-4xl font-bold text-center mb-6">Industry Served</h2>
-        {/* <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto text-lg">
-          At stackLoop, our culture defines how we work, grow, and innovate.
-          Each principle shapes the way we build technology and connect as a
-          team.
-        </p> */}
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {[
