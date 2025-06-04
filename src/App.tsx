@@ -10,8 +10,8 @@ import { Contact } from "./pages/Contact";
 import Services from "./pages/Services";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Support } from "./pages/support";
 import { LatestNews } from "./pages/LatestNews";
+import { Support } from "./pages/support";
 
 export function App() {
   useEffect(() => {
