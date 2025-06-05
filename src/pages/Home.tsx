@@ -50,7 +50,7 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <TitleImageSlider
             slides={[
-              { src: home, title: "Home Page Banner" },
+              { src: home, title: "Power Plant" },
               { src: petrochemicalImg, title: "Petrochemical" },
               { src: steelImg, title: "Steel Plant" },
               { src: fertilizerImg, title: "Fertilizer plant" },

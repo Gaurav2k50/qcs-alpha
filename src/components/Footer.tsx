@@ -140,7 +140,7 @@ export const Footer = () => {
       <div className="border-t border-dashed mt-12 pt-4 text-sm text-gray-400">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
           <span className="mb-2 md:mb-0">All rights reserved.</span>
-          <span>Copyright © Quantic Control Pvt. Ltd 2025</span>
+          <span>Copyright © Quantic Control System 2025</span>
         </div>
       </div>
     </footer>
