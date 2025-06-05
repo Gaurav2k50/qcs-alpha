@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import gasAnalyzer1 from "../assets/images/gas-analyzers/H2,Ar,He-Gas-analyzer-1.jpg";
 import gasAnalyzer2 from "../assets/images/gas-analyzers/CEMS-2.jpg";
 import gasAnalyzer3 from "../assets/images/gas-analyzers/Moisture-meter-3.jpeg";
@@ -21,9 +22,21 @@ import swas1 from "../assets/images/SWAS & it's Components/SWAS-Panel-1.png";
 import swas2 from "../assets/images/SWAS & it's Components/QCS-Sample-cooler2.jpg";
 import swas3 from "../assets/images/SWAS & it's Components/QCS-Dual-Cation-Column-3.jpeg";
 
-import productImg4 from "../assets/images/Multi components analyser1.jpg";
-import productImg5 from "../assets/images/Oxygen analyzer img 2 in-situ type.jpeg";
-import productImg6 from "../assets/images/pHmeter.jpeg";
+import gasAnalyzersComponents1 from "../assets/images/gas-analyzrs-component/3-way-ball-Valve-QCS-1.png";
+import gasAnalyzersComponents2 from "../assets/images/gas-analyzrs-component/Dual-Stage-Cylinder-Regulator-QCS-2.png";
+import gasAnalyzersComponents3 from "../assets/images/gas-analyzrs-component/Line-Regulator-QCS-3.png";
+import gasAnalyzersComponents4 from "../assets/images/gas-analyzrs-component/Male-Connector-QCS-4.png";
+import gasAnalyzersComponents5 from "../assets/images/gas-analyzrs-component/Moistrue-Trapper-QCS-5.png";
+import gasAnalyzersComponents6 from "../assets/images/gas-analyzrs-component/Needle-Valve-QCS-6.png";
+import gasAnalyzersComponents7 from "../assets/images/gas-analyzrs-component/Tee-QCS-7.png";
+import gasAnalyzersComponents8 from "../assets/images/gas-analyzrs-component/QCS-Flowmeter-Photoroom-8.png";
+
+import probe1 from "../assets/images/probes&filters/Probe.png";
+import probe2 from "../assets/images/probes&filters/Sample-Filter-Housing.png";
+import probe3 from "../assets/images/probes&filters/Sample-Probe-For-In-Situ Zirconia Analyzer.png";
+
+import other1 from "../assets/images/other-accessories/Temperature-Sensor.png";
+import other2 from "../assets/images/other-accessories/Tabular-Furnace.jpeg";
 
 const services = [
   {
@@ -100,9 +113,58 @@ const services = [
   },
   {
     image: sampleHandlingSystem4,
-    title: "Sample Handling System Process Auto Purging And Calibration",
+    title: "Sample Handling System Process",
     desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
     category: "Sample Handling System",
+  },
+
+  {
+    image: gasAnalyzersComponents1,
+    title: "3-Way Ball Valve",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
+  },
+  {
+    image: gasAnalyzersComponents2,
+    title: "Dual Stage Cylinder Regulator",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
+  },
+  {
+    image: gasAnalyzersComponents3,
+    title: "Line Regulator",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
+  },
+  {
+    image: gasAnalyzersComponents4,
+    title: "Male Connector",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
+  },
+  {
+    image: gasAnalyzersComponents5,
+    title: "Moisture Trapper",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
+  },
+  {
+    image: gasAnalyzersComponents6,
+    title: "Needle Valve",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
+  },
+  {
+    image: gasAnalyzersComponents7,
+    title: "Tee",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
+  },
+  {
+    image: gasAnalyzersComponents8,
+    title: "Flowmeter",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Gas Analysis Components",
   },
 
   {
@@ -111,6 +173,7 @@ const services = [
     desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
     category: "SWAS & It's Components",
   },
+
   {
     image: swas2,
     title: "Sample Cooler",
@@ -123,24 +186,36 @@ const services = [
     desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
     category: "SWAS & It's Components",
   },
-  {
-    image: productImg4,
-    title: "Multicomponent Gas Analyzer",
-    desc: "Fast, SEO-friendly, and responsive WordPress websites that are easy to manage.",
-    category: "Analyzers",
-  },
 
   {
-    image: productImg5,
-    title: "Oxygen Analyzer",
-    desc: "Boost your search rankings and site speed to attract and convert more users.",
-    category: "Analyzers",
+    image: probe1,
+    title: "Probe",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Probes & Filters",
   },
   {
-    image: productImg6,
-    title: "pH meter and pH sensor",
+    image: probe2,
+    title: "Sample Gas Filter Housing",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Probes & Filters",
+  },
+  {
+    image: probe3,
+    title: "Sample Probe for In-situ Zirconia Analyzer",
+    desc: "Crafting engaging user experiences and powerful brand visuals that make you stand out.",
+    category: "Probes & Filters",
+  },
+  {
+    image: other1,
+    title: "Temperature Sensor",
     desc: "Data-driven marketing campaigns that increase visibility and deliver measurable ROI.",
-    category: "Meters",
+    category: "Other Accessories",
+  },
+  {
+    image: other2,
+    title: "Tabuler Furnace",
+    desc: "Data-driven marketing campaigns that increase visibility and deliver measurable ROI.",
+    category: "Other Accessories",
   },
 ];
 
