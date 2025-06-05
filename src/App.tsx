@@ -12,14 +12,13 @@ import "aos/dist/aos.css";
 import { LatestNews } from "./pages/LatestNews";
 import { Support } from "./pages/Support";
 import { Products } from "./components/Products";
-// import { Support } from "./pages/support";
 
 export function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true, // whether animation should happen only once
-      mirror: false, // whether elements should animate out while scrolling past
+      once: true,
+      mirror: false,
     });
   }, []);
 
