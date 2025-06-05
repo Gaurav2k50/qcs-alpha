@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Products", path: "/services" },
+  { name: "Products", path: "/products" },
   { name: "Latest News", path: "/latestNews" },
   { name: "Support", path: "/support" },
   { name: "Contact Us", path: "/contact" },

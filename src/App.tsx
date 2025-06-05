@@ -7,11 +7,12 @@ import { About } from "./pages/About";
 // import { Blogs, LatestNews } from "./pages/Blogs";
 import { Portfolio } from "./pages/Portfolio";
 import { Contact } from "./pages/Contact";
-import Services from "./pages/Services";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { LatestNews } from "./pages/LatestNews";
-import { Support } from "./pages/support";
+import { Support } from "./pages/Support";
+import { Products } from "./components/Products";
+// import { Support } from "./pages/support";
 
 export function App() {
   useEffect(() => {
@@ -32,7 +33,7 @@ export function App() {
           <Route path="/latestNews" element={<LatestNews />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/support" element={<Support />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
