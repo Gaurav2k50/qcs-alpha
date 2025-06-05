@@ -1,7 +1,7 @@
 import React from "react";
 import { PageBanner } from "../components/PageBanner";
 import { ServiceEnquiryForm } from "../components/ServiceEnquiryForm";
-import supportImg from "../assets/images/Support page img.jpg";
+import supportImg from "../assets/images/Support-page-img.jpg";
 
 interface ServiceEnquiryFormData {
   productName: string;
