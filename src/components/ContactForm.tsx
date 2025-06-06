@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { sendContactEmail } from "../utils/emailjs";
 
-const ContactForm: React.FC = () => {
+export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -8,6 +9,9 @@ const ContactForm: React.FC = () => {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -15,10 +19,25 @@ const ContactForm: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement form submission logic here
-    console.log(formData);
+    try {
+      setStatus("submitting");
+      await sendContactEmail(formData);
+      setStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch (error) {
+      console.error("Contact form submission error:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    }
   };
 
   return (
@@ -31,6 +50,7 @@ const ContactForm: React.FC = () => {
         onChange={handleChange}
         className="w-full p-2 border border-gray-300 rounded"
         required
+        disabled={status === "submitting"}
       />
       <input
         type="email"
@@ -40,6 +60,7 @@ const ContactForm: React.FC = () => {
         onChange={handleChange}
         className="w-full p-2 border border-gray-300 rounded"
         required
+        disabled={status === "submitting"}
       />
       <input
         type="tel"
@@ -48,6 +69,7 @@ const ContactForm: React.FC = () => {
         value={formData.phone}
         onChange={handleChange}
         className="w-full p-2 border border-gray-300 rounded"
+        disabled={status === "submitting"}
       />
       <input
         type="text"
@@ -56,6 +78,7 @@ const ContactForm: React.FC = () => {
         value={formData.subject}
         onChange={handleChange}
         className="w-full p-2 border border-gray-300 rounded"
+        disabled={status === "submitting"}
       />
       <textarea
         name="message"
@@ -65,15 +88,25 @@ const ContactForm: React.FC = () => {
         className="w-full p-2 border border-gray-300 rounded"
         rows={5}
         required
+        disabled={status === "submitting"}
       />
+      {status === "success" && (
+        <div className="text-green-600">Message sent successfully!</div>
+      )}
+      {status === "error" && (
+        <div className="text-red-600">
+          Failed to send message. Please try again.
+        </div>
+      )}
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className={`w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed ${
+          status === "submitting" ? "opacity-70" : ""
+        }`}
+        disabled={status === "submitting"}
       >
-        Send Message
+        {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
 };
-
-export default ContactForm;

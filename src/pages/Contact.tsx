@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "../components/ContactForm";
+import { ContactForm } from "../components/ContactForm";
 import { PageBanner } from "../components/PageBanner";
 import contactImg from "../assets/images/Contact-us-img.jpg";
 import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";

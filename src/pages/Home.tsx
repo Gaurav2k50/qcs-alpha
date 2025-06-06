@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
       {/* Hero Section */}
-      <Products limit={8} />
+      <Products limit={4} />
 
       {/* Title + Image Slider Section */}
       <section className="py-16 px-6 md:px-20 bg-gray-100">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { sendSupportEmail } from "../utils/emailjs";
 
 interface ServiceEnquiryFormData {
   productName: string;
@@ -27,6 +28,10 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
     problemDetails: "",
   });
 
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -37,17 +42,27 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
-    setFormData({
-      productName: "",
-      productId: "",
-      companyName: "",
-      companyPhone: "",
-      companyEmail: "",
-      problemDetails: "",
-    });
+    try {
+      setStatus("submitting");
+      await sendSupportEmail(formData);
+      onSubmit(formData);
+      setStatus("success");
+      setFormData({
+        productName: "",
+        productId: "",
+        companyName: "",
+        companyPhone: "",
+        companyEmail: "",
+        problemDetails: "",
+      });
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch (error) {
+      console.error("Service enquiry submission error:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    }
   };
 
   return (
@@ -71,6 +86,7 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             required
+            disabled={status === "submitting"}
           />
         </div>
 
@@ -90,6 +106,7 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             required
+            disabled={status === "submitting"}
           />
         </div>
 
@@ -109,6 +126,7 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             required
+            disabled={status === "submitting"}
           />
         </div>
 
@@ -128,6 +146,7 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             required
+            disabled={status === "submitting"}
           />
         </div>
 
@@ -147,6 +166,7 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             required
+            disabled={status === "submitting"}
           />
         </div>
 
@@ -166,16 +186,31 @@ export const ServiceEnquiryForm: React.FC<ServiceEnquiryFormProps> = ({
             rows={4}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             required
+            disabled={status === "submitting"}
           />
         </div>
+
+        {status === "success" && (
+          <div className="text-green-600 text-center">
+            Enquiry sent successfully!
+          </div>
+        )}
+        {status === "error" && (
+          <div className="text-red-600 text-center">
+            Failed to send enquiry. Please try again.
+          </div>
+        )}
 
         {/* Submit Button */}
         <div className="flex justify-center">
           <button
             type="submit"
-            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-300"
+            className={`px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-300 disabled:bg-blue-400 disabled:cursor-not-allowed ${
+              status === "submitting" ? "opacity-70" : ""
+            }`}
+            disabled={status === "submitting"}
           >
-            Send
+            {status === "submitting" ? "Sending..." : "Send"}
           </button>
         </div>
       </form>
