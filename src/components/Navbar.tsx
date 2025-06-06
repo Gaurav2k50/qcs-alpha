@@ -40,12 +40,12 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`bg-white shadow-md sticky top-0 z-50 transition-all duration-300 ${
+      className={`bg-white shadow-md fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
         scrolled ? "py-2" : "py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex justify-between items-center w-full">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img

@@ -230,7 +230,11 @@ const categories = [
   "Other Accessories",
 ];
 
-export const Products: React.FC = () => {
+interface ProductsProps {
+  limit?: number;
+}
+
+export const Products: React.FC<ProductsProps> = ({ limit }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -242,42 +246,45 @@ export const Products: React.FC = () => {
       ? services
       : services.filter((service) => service.category === selectedCategory);
 
+  // Apply the limit only if it's provided
+  const displayedProducts = limit
+    ? filteredProducts.slice(0, limit)
+    : filteredProducts;
+
   return (
     <section className="bg-[#f7f8fa] py-16 px-6 md:px-20">
-      {/* <PageBanner
-        title="About Us"
-        description="Quantic at a Glance"
-        backgroundImage={productImg6}
-      /> */}
       <h2
         className="text-4xl font-bold text-center text-[#0f172a] mb-12 leading-snug"
         data-aos="fade-up"
       >
-        All Products
+        {limit ? "Featured Products" : "All Products"}
       </h2>
 
-      {/* Category Filter */}
-      <div
-        className="flex justify-center gap-4 mb-8 flex-wrap"
-        data-aos="fade-up"
-      >
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-              selectedCategory === category
-                ? "bg-indigo-600 text-white"
-                : "bg-white text-indigo-600 hover:bg-indigo-50"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      {/* Category Filter - Only show if not limited */}
+      {!limit && (
+        <div
+          className="flex justify-center gap-4 mb-8 flex-wrap"
+          data-aos="fade-up"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                selectedCategory === category
+                  ? "bg-indigo-600 text-white"
+                  : "bg-white text-indigo-600 hover:bg-indigo-50"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      )}
 
+      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filteredProducts.map((service, index) => (
+        {displayedProducts.map((service, index) => (
           <div
             key={index}
             className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-gray-200 transition-all duration-300"
@@ -304,6 +311,18 @@ export const Products: React.FC = () => {
           </div>
         ))}
       </div>
+
+      {/* View All Products button - Only show if limited */}
+      {limit && displayedProducts.length > 0 && (
+        <div className="text-center mt-12">
+          <a
+            href="/products"
+            className="inline-block px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+          >
+            View All Products
+          </a>
+        </div>
+      )}
     </section>
   );
 };
