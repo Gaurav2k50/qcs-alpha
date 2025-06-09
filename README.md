@@ -1,47 +1,73 @@
-# 🚀 StackLoop Website
+# 🏭 Quantic Control System
 
-A modern, responsive website for StackLoop — a cutting-edge tech company specializing in scalable web solutions and digital transformation services.
+A modern, responsive website for Quantic Control System — an ISO 9001:2015 certified company specializing in process gas and liquid analyzer solutions for industrial applications.
 
 [View Live Demo](#) | [Documentation](#) | [Report Bug](#) | [Request Feature](#)
 
 ## ✨ Overview
 
-StackLoop's official website showcases our comprehensive range of services, portfolio, and expertise in delivering high-performance digital solutions. Built with modern technologies and best practices in web development.
+Quantic Control System's official website showcases our comprehensive range of industrial solutions, products, and expertise in delivering high-precision instrumentation and analysis tools. Built with modern technologies and best practices in web development, this platform serves as a gateway to our industrial automation and control solutions.
 
 ### 🎯 Key Features
 
 - 📱 Fully Responsive Design
 - 🎨 Modern UI/UX with AOS Animations
-- 🔄 Dynamic Content Loading
-- 💼 Portfolio Showcase
-- 📝 Blog Section
-- 📞 Contact Form Integration
-- 🎯 Service Listings
-- 👥 Team Section
+- 🏭 Comprehensive Product Catalog
+- 🔬 Industrial Solutions Showcase
+- 📊 Gas & Liquid Analyzer Details
+- 📞 Contact & Service Inquiry Forms
+- 🎯 Industry-specific Solutions
+- 👥 Expert Team Section
+- 🏢 Customer Portfolio Display
+- 📋 Detailed Technical Specifications
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework:** React 19.1.0
-- **Styling:** Tailwind CSS 3.4.1
-- **Language:** TypeScript 5.8.3
-- **Build Tool:** Vite 6.3.5
-- **Routing:** React Router DOM 7.6.1
-- **Animation:** AOS 2.3.4
-- **Slider:** Swiper 11.2.8
-- **Icons:** React Icons 5.5.0
+- **Frontend Framework:** React with TypeScript
+- **Styling:**
+  - Tailwind CSS for responsive design
+  - Custom CSS for specialized components
+- **Development Tools:**
+  - Vite for fast development and building
+  - TypeScript for type safety
+  - ESLint for code quality
+- **Key Libraries:**
+  - React Router DOM for navigation
+  - Swiper for image carousels
+  - AOS for scroll animations
+  - EmailJS for contact form handling
+  - React Icons for UI icons
+- **Additional Features:**
+  - Responsive image optimization
+  - Custom form validation
+  - Interactive product catalogs
+  - Industry-specific filtering
 
 ## 🗂️ Project Structure
 
 ```
 src/
-├── assets/          # Static assets (images, fonts, etc.)
-├── components/      # Reusable UI components
-│   ├── common/      # Shared components (Button, Card, etc.)
-│   └── ...         # Feature-specific components
-├── pages/          # Main application pages
-├── App.tsx         # Main application component
-├── main.tsx        # Application entry point
-└── index.css       # Global styles
+├── assets/                     # Static assets
+│   ├── images/                # Product and industry images
+│   │   ├── gas-analyzers/    # Gas analyzer product images
+│   │   ├── liquid-analyzers/ # Liquid analyzer images
+│   │   └── probes&filters/   # Probe and filter images
+│   └── fonts/                # Custom fonts
+├── components/               # Reusable UI components
+│   ├── common/              # Base components (Button, Card, etc.)
+│   ├── ContactForm.tsx      # Contact form component
+│   ├── EstemedCustomers.tsx # Customer showcase
+│   ├── Products.tsx        # Product catalog
+│   └── ServiceCard.tsx     # Service information cards
+├── pages/                  # Main application pages
+│   ├── About.tsx          # Company information
+│   ├── Products.tsx       # Product listings
+│   ├── Support.tsx        # Technical support
+│   └── Contact.tsx        # Contact information
+├── utils/                 # Utility functions
+│   └── emailjs.ts        # Email service integration
+├── App.tsx               # Main application component
+└── main.tsx             # Application entry point
 ```
 
 ## 🚀 Getting Started
@@ -56,8 +82,8 @@ src/
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/Gaurav2k50/stackLoop-website.git
-   cd stackLoop-website
+   git clone https://github.com/Gaurav2k50/quantic-control-system.git
+   cd quantic-control-system
    ```
 
 2. Install dependencies
@@ -98,29 +124,67 @@ export default tseslint.config({
 });
 ```
 
+## 🔧 Development Guidelines
+
+### Code Style
+
+- Follow TypeScript best practices
+- Use functional components with hooks
+- Implement responsive design patterns
+- Write meaningful component and variable names
+- Add proper TypeScript types and interfaces
+- Comment complex business logic
+
+### Best Practices
+
+- Keep components small and focused
+- Use proper image optimization
+- Implement proper error handling
+- Follow accessibility guidelines
+- Test across different devices and browsers
+
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add: some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create your feature branch (`git checkout -b feature/NewFeature`)
+3. Follow the code style guidelines
+4. Test your changes thoroughly
+5. Commit with clear messages (`git commit -m 'Add: detailed description'`)
+6. Push to your branch (`git push origin feature/NewFeature`)
+7. Open a detailed Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 👥 Team
+## 🏢 About Us
 
-- Gaurav Singh - CEO & Founder
-- Shourav Kumar - CEO & Founder
+Quantic Control System is an ISO 9001:2015 certified company and MSME organization based in Jamshedpur. We specialize in:
+
+- Process Gas Analyzers
+- Continuous Emission Monitoring Systems (CEMS)
+- Sample Handling Systems
+- Liquid Analyzers
+- Steam and Water Analysis Systems (SWAS)
+- Industrial Automation Solutions
+
+## 🎯 Industries We Serve
+
+- Power Generation Plants
+- Steel Manufacturing
+- Chemical Plants
+- Air Separation Units
+- R&D Facilities
+- Petrochemical Industries
+- Cement Industries
+- Paper & Pulp Industries
 
 ## 📞 Contact
 
-- Website: [stackloop.com](#)
-- Email: contact@stackloop.com
-- Location: 1st Floor, Gamharia, Jamshedpur, Jharkhand 832108
+- Website: [quanticcontrolsystem.com](#)
+- Email: info@quanticcontrolsystem.com
+- Location: Shantiniketan Jamshedpur Jharkhand-832108
 
 ---
 
-Made with ❤️ by StackLoop Team
+Made with dedication by Quantic Control System Team
