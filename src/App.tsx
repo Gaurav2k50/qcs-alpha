@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import { LatestNews } from "./pages/LatestNews";
 import { Support } from "./pages/Support";
 import { Products } from "./components/Products";
+import { ProductDetail } from "./pages/ProductDetail";
 
 export function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/support" element={<Support />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
