@@ -44,8 +44,53 @@ export const services = [
     id: 1,
     image: gasAnalyzer1,
     title: "Ar,He,H2 TCD-Analyzer",
-    desc: "Custom web applications that are scalable, secure, and tailored to your business goals.",
+    desc: "High-precision thermal conductivity detector gas analyzer for measuring H2, Ar, and He concentrations.",
     category: "Gas Analyzers",
+    availableRanges: [
+      "0-3.5%",
+      "0-3.5%",
+      "0-3.5%",
+      "0-3.5%",
+      "0-3.5%",
+      "0-3.5%",
+    ],
+    technology: "TCD(Thermal Conductivity Detector)",
+    generalDescription:
+      "This gas analyzer measures the concentration of gases by utilizing the difference in thermal conductivities between two gas components. It consists of a detector with a reference chamber and a measuring chamber, each containing a thin platinum wire. The reference chamber is filled with reference gas, while the sample gas flows through the measuring chamber. Each platinum wire forms a bridge circuit with an external fixed resistor and is heated by a constant current. When there is a change in the concentration of the component being measured, the thermal conductivity of the sample gas changes, affecting the temperature of the platinum wire in the measuring chamber. This change in temperature is then converted into a change in electric resistance, allowing for the calculation of the concentration of the measured gas.",
+    details: {
+      description: [
+        "This is fuji make thermal conductivity Detector (TCD) Gas analyzer.",
+        "Measurable components of gases: H2, Ar, He.",
+        "Both ongoing evaluation and instantaneous observation.",
+        "Anyone utilizing the display guide to operate.",
+        "Compact and lightweight design that may be installed wherever.",
+      ],
+      specifications: {
+        display: "LCD with back light 4-digit",
+        powerSupply: "100–240 V AC, 50/60 Hz, approx. 50 VA",
+        mounting: "Panel mount",
+        dimensions: "240 × 192 × 213 mm",
+        weight: "Approx. 5kg",
+        repeatability: "±1%FS",
+        driftZeroPoint: "≤ ±2% FS per week (H2 measurement)",
+        spanPoint: "≤ ±2% FS per week (H2 measurement)",
+        responseSpeed: {
+          standard: "≤ 60 s (at flow rate of 0.4 L/min)",
+          highSpeed:
+            "≤ 10 s (at flow rate of 1 L/min) allowed only for H2 measurement (reference gas N2)",
+        },
+      },
+      applications: [
+        "Research facilities using hydrogen gas",
+        "Monitoring of reductive atmosphere in industrial furnaces",
+        "Semiconductor equipment (H2)",
+        "Hydrogen generators (H2)",
+        "Firing furnaces (H2)",
+        "Gas generating plant (Ar, He)",
+        "Superconducting equipment (He)",
+        "Air separation plants (Ar)",
+      ],
+    },
   },
   {
     id: 2,
@@ -53,6 +98,28 @@ export const services = [
     title: "CEMS Analyzer",
     desc: "Custom web applications that are scalable, secure, and tailored to your business goals.",
     category: "Gas Analyzers",
+    availableRanges: [
+      "SO2 – 0-5000 PPM",
+      "NOx – 0-5000 PPM",
+      "CO – 0-5000 PPM",
+      "CO2 – 0-5 % , 0-25 %",
+      "O2  -  0-10 % , 0-25 %",
+    ],
+    technology: "(a). NDIR    (b). O2 - Micro fuel or Zirconia",
+    generalDescription:
+      "A Continuous Emission Monitoring System (CEMS) is a sophisticated technology employed for the continuous monitoring and recording of emissions from industrial sources. This system plays a crucial role in ensuring compliance with environmental regulations, protecting public health, and minimizing the environmental impact of industrial activities.",
+    details: {
+      description: [
+        "CEM Continuous Emission Monitoring Systems consist of one or several highest performance NDIR gas analyzers, one oxygen analyzer and specially designed and top-quality level sample probe and gas conditioning system. The continuous emissions monitoring systems are designed and continuously upgraded with the lasted technologies. A sampling probe heated to 180°C, A sample line heated to 180°C, A high-performance gas conditioning system, A high-performance No/No2 converter for NOx measurement",
+      ],
+      applications: [
+        "Power Plants: (a). Monitoring emissions from combustion processes, such as those using coal, oil, or natural gas. (b). Ensuring compliance with emission standards for pollutants like SO₂, NOₓ, and CO₂.",
+        "Cement and Lime Kilns: Tracking emissions of particulates and gases to comply with industry-specific regulations.",
+        "Chemical and Petrochemical Industries: Monitoring emissions from various processes, including production, refining, and storage.",
+        "Waste Incineration: Ensuring that emissions from waste incinerators are within permissible limits for pollutants like dioxins and furans.",
+        "Steel and Metallurgical Plants: Monitoring emissions from furnaces and other high-temperature processes.",
+      ],
+    },
   },
   {
     id: 3,
